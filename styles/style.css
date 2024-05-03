@@ -1,0 +1,353 @@
+@import url(https://db.onlinewebfonts.com/c/51ba22ae06790efd464bde752a2cd9d1?family=Flexo-Regular);
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #020202;
+  border-radius: 0.25rem;
+  height: 5rem;
+}
+
+html {
+  font-size: 16px;
+  color: #020202;
+  font-family: sans-serif;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content auto fit-content;
+  justify-items: center;
+
+  background-color: #eaeaea;
+}
+
+nav {
+  grid-row: 1 / span 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  /* display: flex;
+  justify-content: center; */
+  gap: 1rem;
+
+  height: 4rem;
+  width: 100%;
+  margin: 0 0 0.5rem 0;
+
+  align-items: center;
+  background-color: #020202;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  /* margin: 0 0 0 2rem; */
+}
+
+.title > svg {
+  width: 3.5rem;
+}
+
+.title span {
+  font-family: "Flexo-Regular", sans-serif;
+  font-size: 2.5rem;
+  color: #f2f2f2;
+}
+
+.search {
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+  display: flex;
+  background-color: #f2f2f2;
+  border-radius: 0.25rem;
+  padding: 0.1rem;
+}
+
+.search-input {
+  padding: 0 0.5rem;
+  height: 2.4rem;
+  border: none;
+  background-color: #f2f2f2;
+  outline: none;
+}
+
+.search-button {
+  height: 2.5rem;
+  width: 2.5rem;
+  outline: none;
+  border: none;
+  background-color: #f2f2f2;
+  box-shadow: none;
+}
+
+.search-button:hover {
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: 2 / span 1;
+  gap: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+
+  border: 1px solid #d1d1d1;
+  border-radius: 0.25rem;
+  background-color: #fefefe;
+
+  padding: 1rem;
+  width: 360px;
+  height: 420px;
+}
+
+.card:last-of-type {
+  margin: 0 0 1.5rem 0;
+}
+
+.card .card-title,
+.card-id {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.card .type span {
+  border: 1px solid #02020250;
+  font-size: 1.25rem;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0.2rem;
+  text-shadow: 
+  -0.5px -0.5px 0 #00000099,
+  0.5px -0.5px 0 #00000099,
+  -0.5px 0.5px 0 #00000099,
+  0.5px 0.5px 0 #00000099;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card img:hover {
+  animation: jump 0.5s infinite both;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.footer {
+  grid-row: 3 / span 1;
+  align-self: end;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #f2f2f2;
+  background-color: #020202;
+  width: 100%;
+}
+
+.footer h2 {
+  text-align: center;
+}
+
+.footer .contact {
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.footer span {
+  color: darkgray;
+  margin: 0 0 1rem 0;
+}
+
+.footer .links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.links a svg {
+  width: 6rem;
+  height: 6rem;
+  padding: 1.5rem 0;
+  fill: #f2f2f2;
+  transition: transform 0.5s;
+}
+.links a svg:hover {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+.normal {
+  /* Original background-color: #989898; */
+  background-color: #a1a1a1;
+}
+
+.fighting {
+  /* Original background-color: #ffa500; */
+  background-color: #f08733;
+}
+
+.flying {
+  /* Original background-color: #8dc2ff; */
+  background-color: #8fb8e4;
+}
+
+.poison {
+  /* Original background-color: #b500cf; */
+  background-color: #6d4b97;
+}
+
+.ground {
+  /* Original background-color: #b57c34; */
+  background-color: #895229;
+}
+
+.rock {
+  /* Original background-color: #bac18a; */
+  background-color: #ada984;
+}
+
+.bug {
+  /*Original background-color: #96b422; */
+  background-color: #95a135;
+}
+
+.ghost {
+  /* Original background-color: #7b216d; */
+  background-color: #6b426e;
+}
+
+.steel {
+  /* Original background-color: #52acd5; */
+  background-color: #74a2b9;
+}
+
+.fire {
+  /* Original background-color: #ff3a12; */
+  background-color: #d43a30;
+}
+
+.water {
+  /* Original background-color: #2074ff; */
+  background-color: #4c79bc;
+}
+
+.grass {
+  /* Original background-color: #00d92c; */
+  background-color: #5d9d3c;
+}
+.electric {
+  /* Original background-color: #ffe900; */
+  background-color: #f2c341;
+}
+
+.psychic {
+  /* Original background-color: #ff1279; */
+  background-color: #dc4d79;
+}
+
+.ice {
+  /* Original background-color: #00b9ff; */
+  background-color: #78ccf0;
+}
+
+.dragon {
+  /* Original background-color: #6815d7; */
+  background-color: #4c60a9;
+}
+
+.fairy {
+  /* Original background-color: #ff8cfe; */
+  background-color: #ba7fb5;
+}
+.dark {
+  /* Original background-color: #504445; */
+  background-color: #4e403f;
+}
+
+.none {
+  display: none;
+}
+
+@media (max-width: 1366px) {
+  main {
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
+  }
+
+  .card {
+    flex: 0 1px auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+  }
+
+  .card {
+    flex: 0 1px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 1rem;
+  }
+
+  main {
+    width: 100%;
+    grid-template-columns: minmax(350px, 100%);
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    flex: 0 1px auto;
+  }
+}
