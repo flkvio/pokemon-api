@@ -49,11 +49,11 @@ nav {
   grid-row: 1 / span 1;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   /* display: flex;
   justify-content: center; */
-  gap: 1rem;
+
 
   height: 4rem;
   width: 100%;
@@ -64,10 +64,12 @@ nav {
 }
 
 .title {
+  grid-column: 1/span 1;
   display: flex;
   align-items: center;
   font-weight: bold;
-  /* margin: 0 0 0 2rem; */
+  justify-self: right;
+
 }
 
 .title > svg {
@@ -81,8 +83,10 @@ nav {
 }
 
 .search {
-  margin-right: auto;
-  margin-left: auto;
+  grid-column: 2/span 2;
+  /* margin-right: auto; */
+  /* margin-left: auto; */
+  justify-self: center;
   width: fit-content;
   display: flex;
   background-color: #f2f2f2;
